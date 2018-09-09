@@ -1,0 +1,20 @@
+import elementos.*
+import jugadoresPersonajes.*
+
+
+test "luisa"{
+	luisa.personajeActivo (mario)
+	mario.encontrar(aurora)
+	mario.encontrar(castillo)
+	assert.equals (45,  mario.valorRecolectado() )
+	assert.equals (true, mario.esFeliz()) 
+	assert.equals (170 ,  castillo.nivelDeDefensa() )
+}
+test "floki" {
+
+	floki.arma (jabalina)
+	assert.equals (jabalina , floki.arma)
+	
+	
+
+}

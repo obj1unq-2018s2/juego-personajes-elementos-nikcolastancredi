@@ -1,10 +1,13 @@
+import elementos.*
+
+
 object luisa {
-	var personajeActivo = noHayPersonaje
+	var property  personajeActivo = noHayPersonaje
 }
 
 
 object floki {
-	var arma
+	var property arma 
 	
 	method encontrar(elemento) {
 	    if (arma.estaCargada()) {
@@ -16,13 +19,17 @@ object floki {
 
 
 object mario {
-	var valorRecolectado = 0
+	var property valorRecolectado = 0
+	var alturaUltimoElemento = 0
 	
 	method encontrar(elemento) {
 	    valorRecolectado += elemento.valorQueOtorga()
 	    elemento.recibirTrabajo()
-	    // ... acá hay que agregar una línea ...
+	    alturaUltimoElemento = elemento.altura() //  quien tiene la responzabilidad de acordarse cual fue el ultimo elemento que se encontro
+	    
 	}
+	
+	method esFeliz ()  = valorRecolectado <= 50 or alturaUltimoElemento >= 10
 }
 
 
