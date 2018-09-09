@@ -29,7 +29,7 @@ object mario {
 	    
 	}
 	
-	method esFeliz ()  = valorRecolectado <= 50 or alturaUltimoElemento >= 10
+	method esFeliz ()  = valorRecolectado >= 50 or alturaUltimoElemento >= 10
 }
 
 

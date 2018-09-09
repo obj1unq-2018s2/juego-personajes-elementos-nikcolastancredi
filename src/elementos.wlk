@@ -2,8 +2,8 @@ import jugadoresPersonajes.*
 
 object ballesta{
 	var property altura = 0
-	var flechas = 10
-	const potencia = 4 
+	var property flechas = 10
+	const property potencia = 4 
 	method estaCargada() = flechas > 0 
 	
 	method registrarUso(){

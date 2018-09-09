@@ -13,7 +13,7 @@ Se pide armar estos tres tests
 Verificar que: 
 	- el valor total recolectado por `mario` es 16, 
 	- la altura de la `tipa` es 9 metros, 
-	- `mario` no es feliz, 
+	- `mario` no es feliz,
 	- `aurora` está muerta, 
 	- la defensa del `castillo` es 150, y 
 	- la `jabalina` no está cargada.

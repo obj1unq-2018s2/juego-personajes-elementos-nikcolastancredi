@@ -2,19 +2,40 @@ import elementos.*
 import jugadoresPersonajes.*
 
 
-test "luisa"{
+test "luisa tiene como personaje activo a `mario`"{
 	luisa.personajeActivo (mario)
-	mario.encontrar(aurora)
-	mario.encontrar(castillo)
+	luisa.personajeActivo().encontrar(aurora)
+	luisa.personajeActivo().encontrar(castillo)
 	assert.equals (45,  mario.valorRecolectado() )
 	assert.equals (true, mario.esFeliz()) 
 	assert.equals (170 ,  castillo.nivelDeDefensa() )
 }
-test "floki" {
 
-	floki.arma (jabalina)
-	assert.equals (jabalina , floki.arma)
-	
-	
+test "floki tiene como arma la jabalina" {
+	luisa.personajeActivo (mario)
+	luisa.personajeActivo().encontrar(tipa)
+	luisa.personajeActivo (floki)
+	luisa.personajeActivo().arma (jabalina)
+	assert.equals (jabalina , luisa.personajeActivo().arma())
+	luisa.personajeActivo().encontrar(aurora)
+	luisa.personajeActivo().encontrar(castillo)
+	assert.equals (16, mario.valorRecolectado ())
+	assert.equals (9, tipa.altura())
+	assert.equals (false,  mario.esFeliz())
+	assert.equals (false,  aurora.estaViva())
+	assert.equals (150, castillo.nivelDeDefensa())
+	assert.equals (false , jabalina.estaCargada())
+}
 
+test "floki tiene como arma la ballesta"{
+	luisa.personajeActivo (floki)
+	luisa.personajeActivo().arma (ballesta)
+	luisa.personajeActivo().encontrar(aurora)
+	luisa.personajeActivo().encontrar(castillo)
+	assert.equals (0, mario.valorRecolectado())
+	assert.equals (true,  aurora.estaViva())
+	assert.equals (146, castillo.nivelDeDefensa())
+	assert.equals (true , ballesta.estaCargada())
+	assert.equals (8,ballesta.flechas()) 
+		
 }
